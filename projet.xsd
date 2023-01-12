@@ -3,19 +3,25 @@
     elementFormDefault="qualified">
     <!-- Déclaration des types, éléments et attributs -->
 
-    <xsd:element name="matrice">
+    <xsd:element name="sudoku">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="row" minOccurs="9" maxOccurs="9">
+                <xsd:element name="region" minOccurs="3" maxOccurs="3">
                     <xsd:complexType>
                         <xsd:sequence>
-                            <xsd:element name="col" minOccurs="9" maxOccurs="9">
-                                <xsd:simpleType>
-                                    <xsd:restriction base="xsd:integer">
-                                        <xsd:minInclusive value="1" />
-                                        <xsd:maxInclusive value="9" />
-                                    </xsd:restriction>
-                                </xsd:simpleType>
+                            <xsd:element name="row" minOccurs="3" maxOccurs="3">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="col" minOccurs="3" maxOccurs="3">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:integer">
+                                                    <xsd:minInclusive value="1" />
+                                                    <xsd:maxInclusive value="9" />
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
                             </xsd:element>
                         </xsd:sequence>
                     </xsd:complexType>
