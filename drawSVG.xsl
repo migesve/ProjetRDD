@@ -25,7 +25,8 @@
                 </xsl:for-each>
 
             </xsl:for-each>
-
+            <rect x="10" y="500" width="500" height="50" style="fill:none; stroke:black; stroke-width:1" />
+                       
             <!-- la grille est gagnante -->
             <xsl:variable name="cols">
                 <xsl:for-each select="//col">
