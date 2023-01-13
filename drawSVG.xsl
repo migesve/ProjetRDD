@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
-    <xsl:template match="sudoku">
-        <svg width="700" height="700">
-
-
+    <svg width="700" height="700">
+ 
+        <xsl:template match="sudoku">
             <xsl:for-each select="region">
 
                 <xsl:for-each select="row">
@@ -17,16 +15,15 @@
                         <text x="{17+50*$xLoc}" y="{35+50*$yLoc}" font-size="30" fill="black">
                             <xsl:value-of select="@val" />
                         </text>
-
-
                     </xsl:for-each>
-
 
                 </xsl:for-each>
 
             </xsl:for-each>
+        </xsl:template>
             <rect x="10" y="500" width="500" height="50" style="fill:none; stroke:black; stroke-width:1" />
                        
+        <xsl:template match="/">
             <!-- la grille est gagnante -->
             <xsl:variable name="cols">
                 <xsl:for-each select="//col">
@@ -53,7 +50,7 @@
             </xsl:variable>
 
             <xsl:if test="string-length($cols) = 9 and string-length($rows) = 9 and string-length($regions) = 9">
-                <xsl:text x="10" y="475">La grille de sudoku est gagante.</xsl:text>
+                <xsl:text x="10" y="515">La grille de sudoku est gagante.</xsl:text>
             </xsl:if>
 
             <!-- La grille est incorrect ou correct -->
@@ -87,8 +84,8 @@
                 <xsl:text>Les régions suivantes ne sont pas valides : </xsl:text>
                 <xsl:value-of select="$regions"/>
             </xsl:if>
-        </svg>
+        
     </xsl:template>
-
+    </svg>
 
 </xsl:stylesheet>
