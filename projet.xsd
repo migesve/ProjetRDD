@@ -31,7 +31,7 @@
                                                 <xsd:simpleContent>
                                                     <xsd:extension base="cell">
                                                         <xsd:attribute name="name" type="xsd:string" />
-                                                        <xsd:attribute name="val" type="xsd:integer" use="required" />
+                                                        <xsd:attribute name="val" type="xsd:integer" />
                                                     </xsd:extension>
                                                 </xsd:simpleContent>
                                             </xsd:complexType>
