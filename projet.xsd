@@ -4,14 +4,14 @@
     <xsd:simpleType name="cell">
         <xsd:union>
             <xsd:simpleType>
-                <xsd:restriction base="xsd:string">
-                    <xsd:length value="0" />
-                </xsd:restriction>
-            </xsd:simpleType>
-            <xsd:simpleType>
                 <xsd:restriction base="xsd:integer">
                     <xsd:minInclusive value="1" />
                     <xsd:maxInclusive value="9" />
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                    <xsd:length value="0" />
                 </xsd:restriction>
             </xsd:simpleType>
         </xsd:union>
@@ -31,7 +31,7 @@
                                                 <xsd:simpleContent>
                                                     <xsd:extension base="cell">
                                                         <xsd:attribute name="name" type="xsd:string" />
-                                                        <xsd:attribute name="val" type="xsd:string" />
+                                                        <xsd:attribute name="val" type="xsd:integer" />
                                                     </xsd:extension>
                                                 </xsd:simpleContent>
                                             </xsd:complexType>
