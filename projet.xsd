@@ -1,34 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
     <!-- Déclaration des types, éléments et attributs -->
+    <xsd:simpleType name="cell">
+        <xsd:union>
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                    <xsd:length value="0" />
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:integer">
+                    <xsd:minInclusive value="1" />
+                    <xsd:maxInclusive value="9" />
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:union>
+    </xsd:simpleType>
 
     <xsd:element name="sudoku">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="region" minOccurs="3" maxOccurs="3">
+                <xsd:element name="region" minOccurs="9" maxOccurs="9">
                     <xsd:complexType>
                         <xsd:sequence>
                             <xsd:element name="row" minOccurs="3" maxOccurs="3">
                                 <xsd:complexType>
                                     <xsd:sequence>
                                         <xsd:element name="col" minOccurs="3" maxOccurs="3">
-                                            <xsd:simpleType>
-                                                <xsd:restriction base="xsd:integer">
-                                                    <xsd:minInclusive value="1" />
-                                                    <xsd:maxInclusive value="9" />
-                                                </xsd:restriction>
-                                            </xsd:simpleType>
+                                            <xsd:complexType>
+                                                <xsd:simpleContent>
+                                                    <xsd:extension base="cell">
+                                                        <xsd:attribute name="name" type="xsd:string" />
+                                                        <xsd:attribute name="val" type="xsd:string" />
+                                                    </xsd:extension>
+                                                </xsd:simpleContent>
+                                            </xsd:complexType>
                                         </xsd:element>
                                     </xsd:sequence>
-                                    <xsd:attribute name="name" type="xsd:string"/>
+                                    <xsd:attribute name="name" type="xsd:string" />
                                 </xsd:complexType>
                             </xsd:element>
                         </xsd:sequence>
-                        <xsd:attribute name="name" type="xsd:string"/>
+                        <xsd:attribute name="name" type="xsd:string" />
                     </xsd:complexType>
                 </xsd:element>
             </xsd:sequence>
-            <xsd:attribute name="name" type="xsd:string"/>
         </xsd:complexType>
     </xsd:element>
 
