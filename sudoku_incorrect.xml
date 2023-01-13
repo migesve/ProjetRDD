@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sudoku>
+    <region name="Reg1">
+        <row name="Row1">
+            <col name="Col1" val="5"></col>
+            <col name="Col2" val="3"></col>
+            <col name="Col3"></col>
+        </row>
+        <row name="Row2">
+            <col name="Col1" val="6"></col>
+            <col name="Col2"></col>
+            <col name="Col3"></col>
+        </row>
+        <row name="Row3">
+            <col name="Col1"></col>
+            <col name="Col2" val="9"></col>
+            <col name="Col3" val="8"></col>
+        </row>
+    </region>
+    <region name="Reg2">
+        <row name="Row1">
+            <col name="Col4"></col>
+            <col name="Col5" val="7"></col>
+            <col name="Col6"></col>
+        </row>
+        <row name="Row2">
+            <col name="Col4" val="1"></col>
+            <col name="Col5" val="9"></col>
+            <col name="Col6" val="5"></col>
+        </row>
+        <row name="Row3">
+            <col name="Col4"></col>
+            <col name="Col5"></col>
+            <col name="Col6"></col>
+        </row>
+    </region>
+    <region name="Reg3">
+        <row name="Row1">
+            <col name="Col7" ></col>
+            <col name="Col8" ></col>
+            <col name="Col9"></col>
+        </row>
+        <row name="Row2">
+            <col name="Col7" ></col>
+            <col name="Col8"></col>
+            <col name="Col9"></col>
+        </row>
+        <row name="Row3">
+            <col name="Col7" ></col>
+            <col name="Col8" val="6"></col>
+            <col name="Col9"></col>
+        </row>
+    </region>
+
+    <region name="Reg4">
+        <row name="Row4">
+            <col name="Col1" val="8"></col>
+            <col name="Col2" ></col>
+            <col name="Col3" ></col>
+        </row>
+        <row name="Row5">
+            <col name="Col1" val="4"></col>
+            <col name="Col2" ></col>
+            <col name="Col3" ></col>
+        </row>
+        <row name="Row6">
+            <col name="Col1" val="7"></col>
+            <col name="Col2" ></col>
+            <col name="Col3" ></col>
+        </row>
+    </region>
+    <region name="Reg5">
+        <row name="Row4">
+            <col name="Col4" ></col>
+            <col name="Col5" val="6"></col>
+            <col name="Col6"></col>
+        </row>
+        <row name="Row5">
+            <col name="Col4" val="8"></col>
+            <col name="Col5"></col>
+            <col name="Col6" val="3"></col>
+        </row>
+        <row name="Row6">
+            <col name="Col4"></col>
+            <col name="Col5" val="2"></col>
+            <col name="Col6" ></col>
+        </row>
+    </region>
+
+    <region name="Reg6">
+        <row name="Row4">
+            <col name="Col7" ></col>
+            <col name="Col8" ></col>
+            <col name="Col9" val="3"></col>
+        </row>
+        <row name="Row5">
+            <col name="Col7" ></col>
+            <col name="Col8" ></col>
+            <col name="Col9" val="1"></col>
+        </row>
+        <row name="Row6">
+            <col name="Col7" ></col>
+            <col name="Col8"></col>
+            <col name="Col9" val="6"></col>
+        </row>
+    </region>
+    <region name="Reg7">
+        <row name="Row7">
+            <col name="Col1"></col>
+            <col name="Col2" val="6"></col>
+            <col name="Col3"></col>
+        </row>
+        <row name="Row8">
+            <col name="Col1" ></col>
+            <col name="Col2" val="6"></col>
+            <col name="Col3" ></col>
+        </row>
+        <row name="Row9">
+            <col name="Col1" ></col>
+            <col name="Col2" ></col>
+            <col name="Col3"></col>
+        </row>
+    </region>
+    <region name="Reg8">
+        <row name="Row7">
+            <col name="Col4"></col>
+            <col name="Col5" ></col>
+            <col name="Col6"></col>
+        </row>
+        <row name="Row8">
+            <col name="Col4" val="4"></col>
+            <col name="Col5" val="1"></col>
+            <col name="Col6" val="9"></col>
+        </row>
+        <row name="Row9">
+            <col name="Col4" ></col>
+            <col name="Col5" val="8"></col>
+            <col name="Col6"></col>
+        </row>
+    </region>
+    <region name="Reg9">
+        <row name="Row7">
+            <col name="Col7" val="2"></col>
+            <col name="Col8" val="8"></col>
+            <col name="Col9" val="7"></col>
+        </row>
+        <row name="Row8">
+            <col name="Col7" ></col>
+            <col name="Col8" ></col>
+            <col name="Col9" val="5"></col>
+        </row>
+        <row name="Row9">
+            <col name="Col7" ></col>
+            <col name="Col8" val="7"></col>
+            <col name="Col9" val="9"></col>
+        </row>
+    </region>
+</sudoku>
