@@ -26,12 +26,12 @@
                             <xsd:element name="row" minOccurs="3" maxOccurs="3">
                                 <xsd:complexType>
                                     <xsd:sequence>
-                                        <xsd:element name="col" minOccurs="3" maxOccurs="3">
+                                        <xsd:element name="col" minOccurs="3" maxOccurs="3" fixed="">
                                             <xsd:complexType>
                                                 <xsd:simpleContent>
                                                     <xsd:extension base="cell">
                                                         <xsd:attribute name="name" type="xsd:string" />
-                                                        <xsd:attribute name="val" type="xsd:integer" />
+                                                        <xsd:attribute name="val" type="xsd:integer" use="required" />
                                                     </xsd:extension>
                                                 </xsd:simpleContent>
                                             </xsd:complexType>
