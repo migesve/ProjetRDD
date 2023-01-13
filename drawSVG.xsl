@@ -53,7 +53,7 @@
             </xsl:variable>
 
             <xsl:if test="string-length($cols) = 9 and string-length($rows) = 9 and string-length($regions) = 9">
-                <xsl:text x="10" y="500">La grille de sudoku est gagante.</xsl:text>
+                <xsl:text x="10" y="475">La grille de sudoku est gagante.</xsl:text>
             </xsl:if>
 
             <!-- La grille est incorrect ou correct -->
