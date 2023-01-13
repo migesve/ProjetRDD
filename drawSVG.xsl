@@ -24,7 +24,7 @@
             <rect x="10" y="500" width="500" height="50" style="fill:none; stroke:black; stroke-width:1" />
                        
         <!-- <xsl:template match="/">
-            <!-- la grille est gagnante -->
+             la grille est gagnante 
             <xsl:variable name="cols">
                 <xsl:for-each select="//col">
                     <xsl:if test="not(@val = preceding::col/@val)">
@@ -53,8 +53,8 @@
                 <xsl:text x="10" y="515">La grille de sudoku est gagante.</xsl:text>
             </xsl:if>
 
-            <!-- La grille est incorrect ou correct -->
-            <!-- <xsl:variable name="valid" select="true()">
+             La grille est incorrect ou correct 
+             <xsl:variable name="valid" select="true()">
                 <xsl:for-each select="region">
                     <xsl:for-each select="row">
                         <xsl:for-each select="col">
@@ -70,7 +70,7 @@
             </xsl:if>
             <xsl:if test="$valid = false()">
                 <xsl:text x="10" y="500">La grille de sudoku est incorrect</xsl:text>
-            </xsl:if> -->
+            </xsl:if> 
             
             <xsl:if test="not(string-length($cols) = 9)">
                 <xsl:text>Les colonnes suivantes ne sont pas valides : </xsl:text>
