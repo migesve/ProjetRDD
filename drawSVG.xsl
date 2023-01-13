@@ -3,15 +3,15 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
     <xsl:template match="sudoku">
-        <svg width="700" height="700">
+        <svg width="450" height="450">
 
 
             <xsl:for-each select="region">
 
                 <xsl:for-each select="row">
-                    <xsl:variable name="xLoc" select="substring(@name,4,4)" as="xsd:integer()" />
+                    <xsl:variable name="xLoc" select="substring(@name,4,4)-1" as="xsd:integer()" />
                     <xsl:for-each select="col">
-                        <xsl:variable name="yLoc" select="substring(@name,4,4)" as="xsd:integer()" />
+                        <xsl:variable name="yLoc" select="substring(@name,4,4)-1" as="xsd:integer()" />
 
                         <rect x="{50*$xLoc}" y="{50*$yLoc}" width="50" height="50" style="fill:none; stroke:black; stroke-width:1" />
                         <text x="{17+50*$xLoc}" y="{35+50*$yLoc}" font-size="30" fill="black">
@@ -52,26 +52,25 @@
             </xsl:variable>
 
             <xsl:if test="string-length($cols) = 9 and string-length($rows) = 9 and string-length($regions) = 9">
-                <xsl:text x="10" y="500" font-size="30" fill="black">La grille de sudoku est gagante.</xsl:text>
+                <xsl:text>La grille de sudoku est gagante.</xsl:text>
             </xsl:if>
 
             <!-- La grille est incorrect ou correct -->
-            <xsl:variable name="valid" select="true()">
-                <xsl:for-each select="region">
-                    <xsl:for-each select="row">
-                        <xsl:for-each select="col">
-                            <xsl:if test="count(preceding-sibling::col[@val=current()/@val]) &gt; 0">
-                                <xsl:variable name="valid" select="false()"/>
-                            </xsl:if>
-                        </xsl:for-each>
+            <xsl:variable name="valide" select="true()"/>
+            <xsl:for-each select="region">
+                <xsl:for-each select="row">
+                    <xsl:for-each select="col">
+                        <xsl:if test="count(preceding-sibling::col[@val=current()/@val]) &gt; 0">
+                            <xsl:variable name="valide" select="false()"/>
+                        </xsl:if>
                     </xsl:for-each>
                 </xsl:for-each>
-            </xsl:variable>
-            <xsl:if test="$valid = true()">
-                <xsl:text x="10" y="500" font-size="30" fill="black">La grille de sudoku est correct</xsl:text>
+            </xsl:for-each>
+            <xsl:if test="$valide = true()">
+                <xsl:text>La grille de sudoku est correct</xsl:text>
             </xsl:if>
-            <xsl:if test="$valid = false()">
-                <xsl:text x="10" y="500" font-size="30" fill="black">La grille de sudoku est incorrect</xsl:text>
+            <xsl:if test="$valide = false()">
+                <xsl:text>La grille de sudoku est incorrect</xsl:text>
             </xsl:if>
 
         </svg>
