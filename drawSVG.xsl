@@ -52,7 +52,7 @@
             </xsl:variable>
 
             <xsl:if test="string-length($cols) = 9 and string-length($rows) = 9 and string-length($regions) = 9">
-                <xsl:text x="10" y="500" font-size="30" fill="black">La grille de sudoku est gagante.</xsl:text>
+                <xsl:text x="10" y="500">La grille de sudoku est gagante.</xsl:text>
             </xsl:if>
 
             <!-- La grille est incorrect ou correct -->
@@ -68,10 +68,10 @@
                 </xsl:for-each>
             </xsl:variable>
             <xsl:if test="$valid = true()">
-                <xsl:text x="10" y="500" font-size="30" fill="black">La grille de sudoku est correct</xsl:text>
+                <xsl:text x="10" y="500">La grille de sudoku est correct</xsl:text>
             </xsl:if>
             <xsl:if test="$valid = false()">
-                <xsl:text x="10" y="500" font-size="30" fill="black">La grille de sudoku est incorrect</xsl:text>
+                <xsl:text x="10" y="500">La grille de sudoku est incorrect</xsl:text>
             </xsl:if>
 
         </svg>
