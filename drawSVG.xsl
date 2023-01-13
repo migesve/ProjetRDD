@@ -60,7 +60,7 @@
                 <xsl:for-each select="region">
                     <xsl:for-each select="row">
                         <xsl:for-each select="col">
-                            <xsl:if test="count(preceding-sibling::col[@val=current()/@val]) &gt; 0">
+                            <xsl:if test="count(following-sibling::col[@val=current()/@val]) &gt; 0">
                                 <xsl:variable name="valid" select="false()"/>
                             </xsl:if>
                         </xsl:for-each>
