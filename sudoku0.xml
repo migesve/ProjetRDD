@@ -3,19 +3,19 @@
 <sudoku>
     <region name="Reg0">
         <row name="Row0">
-            <col name="Col0" val="A"></col>
-            <col name="Col1" val="B"></col>
-            <col name="Col2" val="C"></col>
+            <col name="Col0" val="1"></col>
+            <col name="Col1" val="1"></col>
+            <col name="Col2" val="1"></col>
         </row>
         <row name="Row1">
-            <col name="Col0" val="D"></col>
-            <col name="Col1" val="E"></col>
-            <col name="Col2" val="F"></col>
+            <col name="Col0" val="1"></col>
+            <col name="Col1" val="1"></col>
+            <col name="Col2" val="1"></col>
         </row>
         <row name="Row2">
-            <col name="Col0" val="G"></col>
-            <col name="Col1" val="H"></col>
-            <col name="Col2" val="K"></col>
+            <col name="Col0" val="1"></col>
+            <col name="Col1" val="1"></col>
+            <col name="Col2" val="1"></col>
         </row>
     </region>
     <region name="Reg1">
